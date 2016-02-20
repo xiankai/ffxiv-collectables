@@ -5,7 +5,9 @@ import Window from './Window';
 export default class App extends Component {
 	render() {
 		return (
-			<div className="container">hi</div>
+			<div className="container">
+				<Window />
+			</div>
 		);
 	}
 }

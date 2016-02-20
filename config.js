@@ -11,7 +11,9 @@ System.config({
   },
   paths: {
     "github:*": "jspm_packages/github/*",
-    "npm:*": "jspm_packages/npm/*"
+    "npm:*": "jspm_packages/npm/*",
+    "reducers/*": "reducers/*",
+    "selectors/*": "selectors/*"
   },
   trace: true,
 
@@ -19,10 +21,12 @@ System.config({
     "babel": "npm:babel-core@5.8.35",
     "babel-runtime": "npm:babel-runtime@5.8.35",
     "core-js": "npm:core-js@1.2.6",
-    "mobservable-react": "npm:mobservable-react@2.1.4",
     "react": "npm:react@0.14.7",
     "react-bootstrap": "npm:react-bootstrap@0.28.3",
     "react-dom": "npm:react-dom@0.14.7",
+    "react-redux": "npm:react-redux@4.4.0",
+    "redux": "npm:redux@3.3.1",
+    "reselect": "npm:reselect@2.0.3",
     "systemjs-hot-reloader": "github:capaj/systemjs-hot-reloader@0.5.6",
     "github:capaj/systemjs-hot-reloader@0.5.6": {
       "debug": "npm:debug@2.2.0",
@@ -264,6 +268,10 @@ System.config({
     "npm:lodash-compat@3.10.2": {
       "process": "github:jspm/nodelibs-process@0.1.2"
     },
+    "npm:lodash@4.5.0": {
+      "buffer": "github:jspm/nodelibs-buffer@0.1.0",
+      "process": "github:jspm/nodelibs-process@0.1.2"
+    },
     "npm:loose-envify@1.1.0": {
       "js-tokens": "npm:js-tokens@1.0.2",
       "process": "github:jspm/nodelibs-process@0.1.2",
@@ -273,11 +281,6 @@ System.config({
     "npm:miller-rabin@4.0.0": {
       "bn.js": "npm:bn.js@4.10.3",
       "brorand": "npm:brorand@1.0.5"
-    },
-    "npm:mobservable-react@2.1.4": {
-      "mobservable": "npm:mobservable@1.2.4",
-      "react": "npm:react@0.14.7",
-      "react-dom": "npm:react-dom@0.14.7"
     },
     "npm:parse-asn1@5.0.0": {
       "asn1.js": "npm:asn1.js@4.5.0",
@@ -352,6 +355,15 @@ System.config({
     "npm:react-prop-types@0.3.0": {
       "warning": "npm:warning@2.1.0"
     },
+    "npm:react-redux@4.4.0": {
+      "hoist-non-react-statics": "npm:hoist-non-react-statics@1.0.5",
+      "invariant": "npm:invariant@2.2.0",
+      "lodash": "npm:lodash@4.5.0",
+      "loose-envify": "npm:loose-envify@1.1.0",
+      "process": "github:jspm/nodelibs-process@0.1.2",
+      "react": "npm:react@0.14.7",
+      "redux": "npm:redux@3.3.1"
+    },
     "npm:react@0.14.7": {
       "fbjs": "npm:fbjs@0.6.1",
       "process": "github:jspm/nodelibs-process@0.1.2"
@@ -365,6 +377,12 @@ System.config({
       "process": "github:jspm/nodelibs-process@0.1.2",
       "stream-browserify": "npm:stream-browserify@1.0.0",
       "string_decoder": "npm:string_decoder@0.10.31"
+    },
+    "npm:redux@3.3.1": {
+      "lodash": "npm:lodash@4.5.0",
+      "lodash-es": "npm:lodash-es@4.5.0",
+      "loose-envify": "npm:loose-envify@1.1.0",
+      "process": "github:jspm/nodelibs-process@0.1.2"
     },
     "npm:ripemd160@1.0.1": {
       "buffer": "github:jspm/nodelibs-buffer@0.1.0",
