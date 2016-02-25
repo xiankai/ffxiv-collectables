@@ -3,16 +3,8 @@ import { connect } from 'react-redux';
 
 @connect()
 export default class Hotkey extends Component {
-	handleClick = () => {
-		let { dispatch, action } = this.props;
-
-		dispatch({
-			type: action
-		});
-	}
-
 	render() {
-		let { name, icon, action, dispatch } = this.props;
+		let { name, icon, action, dispatch, handleClick } = this.props;
 
 		return (
 			<img 
@@ -21,7 +13,7 @@ export default class Hotkey extends Component {
 				style={{
 					cursor: 'pointer'
 				}}
-				onClick={this.handleClick} />
+				onClick={handleClick} />
 		);
 	}
 }

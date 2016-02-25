@@ -6,11 +6,13 @@ import { Provider } from 'react-redux';
 import { error } from './reducers/error';
 import { gatherer } from './reducers/gatherer';
 import { equipment } from './reducers/equipment';
+import { actionbar } from './reducers/actionbar';
 import App from './components/App';
 
 const reducer = combineReducers({
 	gatherer,
-	equipment
+	equipment,
+	actionbar
 });
 
 const store = compose(
