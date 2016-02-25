@@ -1,6 +1,7 @@
 {
   "jspm": {
     "dependencies": {
+      "lodash": "npm:lodash@^4.5.0",
       "react": "npm:react@^0.14.7",
       "react-bootstrap": "npm:react-bootstrap@^0.28.3",
       "react-dom": "npm:react-dom@^0.14.7",

@@ -1,3 +1,4 @@
+import 'lodash';
 import React from 'react';
 import { render } from 'react-dom';
 import { createStore, applyMiddleware, compose, combineReducers } from 'redux';
