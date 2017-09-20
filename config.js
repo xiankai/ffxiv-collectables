@@ -13,7 +13,8 @@ System.config({
     "github:*": "jspm_packages/github/*",
     "npm:*": "jspm_packages/npm/*",
     "reducers/*": "reducers/*",
-    "selectors/*": "selectors/*"
+    "selectors/*": "selectors/*",
+    "observables/*": "observables/*"
   },
   trace: true,
 

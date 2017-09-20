@@ -1,22 +1,10 @@
 import React, { Component, PropTypes } from 'react';
+import { observer } from 'mobservable-react';
+import actions from 'observables/actions';
 import Hotkey from './Hotkey';
-import { connect } from 'react-redux';
-import { getActionFromActionName } from 'selectors/gatherer';
 
-@connect(
-	state => ({
-		actions: state.actionbar.actions
-	})
-)
+@observer
 export default class ActionBar extends Component {
-	handleClick = key => () => {
-		let { dispatch } = this.props;
-		dispatch({
-			type: 'REMOVE_ACTION',
-			key
-		});
-	}
-
 	render() {
 		let { actions } = this.props;
 		return (
@@ -33,5 +21,5 @@ export default class ActionBar extends Component {
 }
 
 ActionBar.propTypes = {
-	
+	actions	
 }

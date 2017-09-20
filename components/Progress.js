@@ -1,12 +1,8 @@
 import React, { Component, PropTypes } from 'react';
-import { connect } from 'react-redux';
+import { observer } from 'mobservable-react';
 import { ProgressBar } from 'react-bootstrap';
 
-@connect(
-	state => ({
-		progress: state.gatherer.progress
-	})
-)
+@observer
 export default class Progress extends Component {
 	render() {
 		let { progress } = this.props;
@@ -21,5 +17,5 @@ export default class Progress extends Component {
 }
 
 Progress.propTypes = {
-	progress: PropTypes.string	
+	progress: PropTypes.number.isRequired	
 }

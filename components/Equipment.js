@@ -1,28 +1,17 @@
 import React, { Component, PropTypes } from 'react';
-import { connect } from 'react-redux';
+import actions from 'observables/actions';
+import { observer } from 'mobservable-react';
 import { Input } from 'react-bootstrap';
-import { equipmentStatSelector } from 'selectors/equipment';
 
-@connect(
-	equipmentStatSelector
-)
+@observer
 export default class Equipment extends Component {
-	handleChange = action => e => {
-		let { dispatch } = this.props;
-
-		dispatch({
-			type: action,
-			value: parseInt(e.target.value)
-		})
-	}
-
 	render() {
-		let { gp, gathering, perception } = this.props;
+		let { actions } = this.props;
 		return (
 			<div>
-				<Input label="GP" type="text" value={gp} onChange={this.handleChange('SET_GP')}></Input>
-				<Input label="Gathering" type="text" value={gathering} onChange={this.handleChange('SET_GATHERING')}></Input>
-				<Input label="Perception" type="text" value={perception} onChange={this.handleChange('SET_PERCEPTION')}></Input>
+				<Input label="GP" type="text" ref={actions.assignRef('gp')}></Input>
+				<Input label="Gathering" type="text" ref={actions.assignRef('gathering')}></Input>
+				<Input label="Perception" type="text" ref={actions.assignRef('perception')}></Input>
 			</div>
 		);
 	}
@@ -30,4 +19,8 @@ export default class Equipment extends Component {
 
 Equipment.propTypes = {
 	
+}
+
+Equipment.defaultProps = {
+	actions
 }
